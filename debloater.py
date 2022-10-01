@@ -36,4 +36,4 @@ for i in range(len(bloat_app)):
     print('uninstalled ',bloat_app[element])
     element += 1
   except:
-    print('failed to uninstall 'bloat_app[element])
+    print('failed to uninstall ',bloat_app[element])
