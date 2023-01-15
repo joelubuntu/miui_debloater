@@ -1,4 +1,4 @@
-import os
+import os , platform
 
 bloat_app = [
   'com.android.chrome',
@@ -89,9 +89,17 @@ bloat_app = [
 element = 0
 
 for i in range(len(bloat_app)):
-  try:
-    os.system('adb shell pm uninstall -k --user 0 ',bloat_app[element])
-    print('uninstalled ',bloat_app[element])
-    element += 1
-  except:
-    print('failed to uninstall ',bloat_app[element])
+  if platform.system() == 'Windows':
+    try:
+      os.system('platform-tools\\adb.exe shell pm uninstall -k --user 0 ',bloat_app[element])
+      print('uninstalled ',bloat_app[element])
+      element += 1
+    except:
+      print('failed to uninstall ',bloat_app[element])
+  if platform.system() == 'Linux':
+    try:
+      os.system('adb shell pm uninstall -k --user 0 ',bloat_app[element])
+      print('uninstalled ',bloat_app[element])
+      element += 1
+    except:
+      print('failed to uninstall ',bloat_app[element])
