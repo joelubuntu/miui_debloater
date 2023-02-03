@@ -87,7 +87,7 @@ def debloat():
     	'com.android.providers.downloads',
     	'com.miui.home',
     	'com.android.providers.partnerbookmarks',
-    	'com.bsp.cathlog',
+#    	'com.bsp.cathlog',
     	'com.google.android.onetimeinitializer',
     	'com.google.android.partnersetup',
     	'com.google.android.printservice.recommendation',
@@ -100,7 +100,7 @@ def debloat():
     	'com.miui.translation.youdao',
     	'com.miui.translationservice',
     	'com.miui.userguide',
-    	'com.xiaomi.joyrose',
+    	'com.xiaomi.joyose',
     	'com.xiaomi.micloud.sdk',
     	]
 	element = 0
